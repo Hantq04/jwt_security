@@ -51,13 +51,13 @@ public class JwtTokenProvider {
                     .build()
                     .parseClaimsJws(authToken);
             return true;
-        }catch (MalformedJwtException e) {
+        } catch (MalformedJwtException e) {
             log.error("INVALID_JWT_TOKEN.");
-        }catch (ExpiredJwtException e) {
+        } catch (ExpiredJwtException e) {
             log.error("EXPIRED_JWT_TOKEN.");
-        }catch (UnsupportedJwtException e) {
+        } catch (UnsupportedJwtException e) {
             log.error("UNSUPPORTED_JWT_TOKEN.");
-        }catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             log.error("JWT_CLAIMS_STRING_IS_EMPTY.");
         }
         return false;

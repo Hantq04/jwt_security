@@ -7,5 +7,6 @@ import ra.payloads.response.MessageResponse;
 
 public interface AuthService {
     MessageResponse registerUser(SignupRequest signupRequest);
+
     JwtResponse loginUser(LoginRequest loginRequest);
 }

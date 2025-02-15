@@ -20,7 +20,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Users user = userRepo.findByUserName(username);
         if (user == null) {
-            throw new  UsernameNotFoundException("USER_NAME_NOT_FOUND.");
+            throw new UsernameNotFoundException("USER_NAME_NOT_FOUND.");
         }
         return CustomUserDetails.mapUserToUserDetail(user);
     }

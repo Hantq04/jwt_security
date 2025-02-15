@@ -10,7 +10,7 @@ import ra.repositories.UserRepo;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     UserRepo userRepo;
 
     @Override

@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class AuthServiceImpl implements AuthService{
+public class AuthServiceImpl implements AuthService {
     AuthenticationManager authenticationManager;
     JwtTokenProvider jwtTokenProvider;
     UserServiceImpl userService;
@@ -72,7 +72,7 @@ public class AuthServiceImpl implements AuthService{
                 switch (role) {
                     case "admin":
                         Roles adminRole = roleService.findByRoleName(ERole.ROLE_ADMIN)
-                            .orElseThrow(() -> new RuntimeException("ROLE_ADMIN_NOT_FOUND."));
+                                .orElseThrow(() -> new RuntimeException("ROLE_ADMIN_NOT_FOUND."));
                         listRoles.add(adminRole);
                         break;
                     case "moderator":

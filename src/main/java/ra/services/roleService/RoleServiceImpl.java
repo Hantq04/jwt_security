@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class RoleServiceImpl implements RoleService{
+public class RoleServiceImpl implements RoleService {
     RoleRepo roleRepo;
 
     @Override
